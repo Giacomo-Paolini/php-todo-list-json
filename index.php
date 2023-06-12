@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <?php include "/api.php" ?>
+        <pre>{{ info }}</pre>
     </div>
     
     <script src="./main.js"></script>
