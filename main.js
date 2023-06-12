@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            api: 'http://localhost:8888/php-todo-list-json/api.php',
+            api: './api.php',
             info: null,
         }
     },
