@@ -10,7 +10,7 @@ if (isset($_POST['newTask'])) {
 
 } elseif (isset($_POST['deleteIndex'])) {
     $index = $_POST['deleteIndex'];
-    $toDoListData[$index] = "<del>" . $toDoListData[$index] . "</del>";
+    unset($toDoListData[$index]);
     file_put_contents('./data.json', json_encode($toDoListData));
 }
 
