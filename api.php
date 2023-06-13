@@ -1,18 +1,18 @@
 <?php
 header('Content-Type: application/json');
 
-$names = [
-    [
-        "name" => "Mario",
-        "last_name" => "Rossi"
-    ],
-    [
-        "name" => "Giovanna",
-        "last_name" => "Bianchi"
-    ]
-];
+$toDoList = file_get_contents('./data.json');
+$toDoListData = json_decode($toDoList, true);
 
-$arrayNames = json_encode($names);
+if (isset($_POST['newTask'])) {
+    $toDoListData[] = $_POST['newTask'];
+    file_put_contents('./data.json', json_encode($toDoListData));
 
-echo $arrayNames;
+} elseif (isset($_POST['deleteIndex'])) {
+    $index = $_POST['deleteIndex'];
+    $toDoListData[$index] = "<del>" . $toDoListData[$index] . "</del>";
+    file_put_contents('./data.json', json_encode($toDoListData));
+}
+
+echo json_encode($toDoListData);
 ?>
