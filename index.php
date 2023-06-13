@@ -12,10 +12,10 @@
 </head>
 <body>
     <div id="app">
-        <div class="container">
+        <div class="container my-bg">
             <div class="row">
                 <div class="mt-4 col-4 offset-4">
-                    <h1 class="text-center">Todo List</h1>
+                    <h1 class="text-center display-2">Todo List</h1>
                     <div>
                         <ul>
                             <div v-for="(item, i) in toDoList" class="d-flex justify-content-between">
@@ -27,7 +27,7 @@
                         </ul>
                         <div class="input-group">
                             <input v-model="newTask" @keyup.enter="addNewTask" type="text" class="form-control" placeholder="Inserisci elemento...">
-                            <button @click="addNewTask" class="btn btn-primary">Aggiungi</button>
+                            <button @click="addNewTask" class="my-btn">Aggiungi</button>
                         </div>
                     </div>
                 </div>

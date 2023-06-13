@@ -1,5 +1,10 @@
-ul {
+ul, h1 {
     padding: 0;
+    color: white;
+}
+
+body {
+    background-color: #001632;
 }
 
 .my-icon {
@@ -10,4 +15,10 @@ ul {
     width: 2rem;
     height: 2rem;
     border-radius: 30%;
+}
+
+.my-btn {
+    background-color: darkblue;
+    color: orange;
+    border: 1px solid orange;
 }
